@@ -11,7 +11,7 @@ public class BookRecord implements Serializable {
 		private int page;
 		private int x;
 		private int y;
-		long time;
+		long  time;
 		Node next;
 		public Node()
 		{}
