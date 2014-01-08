@@ -75,16 +75,32 @@ public class Constant {
 	public final static String BOOK_TABLE_NAME = "book";
 	public final static String BOOK_ID = "bid";
 	public final static String BOOK_PATH = "bpath";
-
+	public final static String BOOK_AUTHOR="bauthor";
+	public final static String BOOK_CATALOG="bcatalog";
+	
 	/** book mark table name and field */
+	public final static String BOOK_MARK_TABLE_ID = "bmtid";
 	public final static String BOOK_MARK_TABLE_NAME = "bookmark";
 	public final static String BOOK_MARK_ID = "bmid";
 	public final static String BOOK_MARK_NAME = "bmname";
-	public final static String BOOK_MARK_OFFSET = "bmoffset";
-	public final static String Book_MARK_SAVETIME = "bmsavetime";
+	public final static String BOOK_MARK_X = "bmx";
+	public final static String Book_MARK_Y = "bmy";
+	
+	public final static String BOOK_CATALOG_TABLE_NAME = "catalogtable";
+	public final static String BOOK_CATALOG_ID="bcid";
+	public final static String BOOK_CATALOG_NAME="bcname";
+	
+	public final static String BOOK_RECORD_TABLE_NAME = "recordtable";
+	public final static String BOOK_RECORD_TABLE_ID = "brtid";
+	public final static String BOOK_RECORD_ID="brid";
+	public final static String BOOK_RECORD_NAME="brname";
+	public final static String BOOK_RECORD_PAGE = "brpage";
+	public final static String BOOK_RECORD_X = "brx";
+	public final static String Book_RECORD_Y = "bry";
 	/** create table */
-	public final static String CREATE_TABLE_BOOK = "create table IF NOT EXISTS book(bid integer primary key autoincrement,bpath varchar(255) not null);";
-	public final static String CREATE_TABLE_BOOK_MARK = "create table IF NOT EXISTS bookmark(bmid integer primary key autoincrement,"
-			+ "bid integer not null,bmname varchar(50) not null,bmoffset integer not null,bmsavetime varchar(20) not null);";
-	public final static String CREATE_TABLE_NOTE = "create table IF NOT EXISTS notetable(bid varchar(255) not null,notename varchar(255) not null,notecatalog varchar(255),notecontent varchar(1000),notesavetime varchar(40) primary key,noteoffset varchar(10))";
+	public final static String CREATE_TABLE_BOOK = "create table IF NOT EXISTS book(bid integer primary key autoincrement,bauthor varchar(255) not null,bcatalog varchar(255) not null,bpath varchar(255) not null);";
+	public final static String CREATE_TABLE_BOOK_MARK = "create table IF NOT EXISTS bookmark(bmtid integer primary key autoincrement,"
+			+ "bmid integer not null,bmname varchar(50) not null,bmpage integer not null,bmx integer not null,bmy integer not null);";
+	public final static String CREATE_TABLE_BOOK_CATALOG = "create table IF NOT EXISTS catalogtable(bcid integer primary key autoincrement,bcname varchar(255) not null)";
+	public final static String CREATE_TABLE_BOOK_RECORD="create table IF NOT EXISTS recordtable(brtid integer primary key autoincrement,brid integer not null,brname varchar(255) not null,brpage integer not null,brx integer not null,bry integer not null,brtime integer not null)";
 }
