@@ -9,7 +9,7 @@ public class Book implements Serializable {
 	private String author;
 	private String catalog;
 	private String path;
-	private List<BookMark> bookmarks;
+	
 	
 	public Book(String name, String author,String catalog,String path)
 	{
@@ -51,35 +51,20 @@ public class Book implements Serializable {
 		this.path = path;
 	}
 	//添加书签
-	public boolean addBookmarks(BookMark bookmark) 
+	public void addBookmarks(BookMark bookmark) 
 	{   
-		for(int i=0;i<bookmarks.size();i++)
-		{
-		if(bookmarks.get(i).equals("bookmark"))
-		 return false; 
-		}
-		bookmarks.add(bookmark);
-		return true;
+		
 	}
 //删除书签
-	public boolean delBookmark(List<BookMark> bookmarks) {
+	public boolean delBookmark() {
 		
-		for(int i=0;i<bookmarks.size();i++)
-		{
-		if(bookmarks.get(i).equals(bookmarks))
-		{
-			bookmarks.remove(bookmarks.get(i));
-		   return true;
-		}
-		}
 		return false;
 		 
 	}
 	//清空书签
-	public void delallBookmark(List<BookMark> bookmarks)
+	public void delallBookmark()
 	{
 		
-		bookmarks.clear();
 	}
 	
 }
