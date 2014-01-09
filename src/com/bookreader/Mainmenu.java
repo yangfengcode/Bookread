@@ -18,7 +18,7 @@ public class Mainmenu extends Activity {
 	            	Intent intent=new Intent();
 	        		intent.setClass(Mainmenu.this, BooklistActivity.class);  
 	                startActivity(intent);  
-	                finish();  
+	                  
 	            	
 	            }   
 	        });  
@@ -29,7 +29,7 @@ public class Mainmenu extends Activity {
 	            	Intent intent=new Intent();
 	        		intent.setClass(Mainmenu.this, CatalogActivity.class);  
 	                startActivity(intent);  
-	                finish();  
+	                  
 	            	
 	            }   
 	        });   
@@ -40,7 +40,7 @@ public class Mainmenu extends Activity {
 	            	Intent intent=new Intent();
 	        		intent.setClass(Mainmenu.this, BookrecordActivity.class);  
 	                startActivity(intent);  
-	                finish();  
+	               
 	            	
 	            }   
 	        });   
@@ -52,7 +52,7 @@ public class Mainmenu extends Activity {
 	            	Intent intent=new Intent();
 	        		intent.setClass(Mainmenu.this, BookmarkActivity.class);  
 	                startActivity(intent);  
-	                finish();  
+	                  
 	            	
 	            }   
 	        });   
