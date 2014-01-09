@@ -5,6 +5,7 @@ import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.util.Log;
+import android.database.SQLException;
 
 import com.bookreader.params.Constant;
 
@@ -25,11 +26,15 @@ public class MySQLiteHelper extends SQLiteOpenHelper {
 		db.execSQL(Constant.CREATE_TABLE_BOOK_CATALOG);
 		
 	}
-
 	@Override
 	public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
 		// TODO Auto-generated method stub
 
 	}
+	
+	
+	
+	
+	
 
 }

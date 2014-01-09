@@ -57,6 +57,15 @@ public class Mainmenu extends Activity {
 	            }   
 	        });   
 	        
+	        Button Btn5 = (Button)findViewById(R.id.button5);//获取按钮资源    
+	        Btn4.setOnClickListener(new Button.OnClickListener(){//创建监听    
+	            public void onClick(View v) {   
+	            	
+	            	
+	            }   
+	        });   
+	        
+	        
 	        
             }
 	}
